@@ -1,0 +1,1 @@
+This JavaScript file explores the use of callback hell within the context of accounting for a set order of chores and the length of time it takes to perform each chore. As each function within the callback pyramid completes, it calls the next successive chore function.
