@@ -5,7 +5,7 @@ function mowYard(name, callback) {
 }
 
 function weedEat(name, callback) {
-    if (weedEat) {
+    if (Math.random() <= .8) {
         setTimeout(() => {console.log(`${name} finished using the weed eater.`);
         callback();
         }, 1500);
@@ -16,7 +16,7 @@ function weedEat(name, callback) {
 }
 
 function trimHedges(name, callback) {
-    if (trimHedges) {
+    if (Math.random() <= .8) {
         setTimeout(() => {console.log(`${name} finished trimming the hedges.`);
         callback();
         }, 1000);
@@ -27,7 +27,7 @@ function trimHedges(name, callback) {
 }
 
 function collectWood(name, callback) {
-    if (collectWood) {
+    if (Math.random() <= .7) {
         setTimeout(() => {console.log(`${name} finished collecting wood.`);
         callback();
         }, 2500);
@@ -38,11 +38,10 @@ function collectWood(name, callback) {
 }
 
 function waterGarden(name, callback) {
-    if (waterGarden) {
+    if (Math.random() <= .6) {
         setTimeout(() => {
             console.log(`${name} finished watering the garden.`);
-            console.log(`${name} finished all their chores!`);
-        callback();
+            callback();
         }, 500);
         
     } else {
@@ -59,7 +58,7 @@ function doSummerChores(name) {
                 trimHedges(name, () => {
                     collectWood(name, () => {
                         waterGarden(name, () => {
-
+                            console.log(`${name} finished all their chores!`);
                         })
                     })
                 })
